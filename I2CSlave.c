@@ -53,10 +53,10 @@ ISR(TWI_vect)
     case TW_BUS_ERROR:
       // some sort of erroneous state, prepare TWI to be readdressed
       TWCR = 0;
-      TWCR = (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+      TWCR = (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN);
       break;
     default:
       TWCR = (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN);
       break;
   }
-} 
+}
